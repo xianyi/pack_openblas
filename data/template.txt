@@ -1,0 +1,17 @@
+
+├── include
+│   ├── cblas.h
+│   ├── f77blas.h
+│   ├── lapacke_config.h
+│   ├── lapacke.h
+│   ├── lapacke_mangling.h
+│   ├── lapacke_utils.h
+│   └── openblas_config.h
+├── lib
+│   ├── libopenblas.a          The static library. Only work with GCC.
+│   ├── libopenblas.def        The DEF file for DLL.
+│   ├── libopenblas.dll        The shared library for Visual Studio and GCC.
+│   ├── libopenblas.exp        The export library for Visual Studio.
+│   └── libopenblas.lib        The import library for Visual Studio.
+└── readme.txt
+
