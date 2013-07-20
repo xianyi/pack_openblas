@@ -21,6 +21,8 @@ N=${#OS_list[@]}
 
 for (( i=0; i<$N; i++));  do
     echo ${OS_list[$i]}
+    echo ${BRANCH}-${OS_list[$i]} Start  at `date`
+
     rm -rf ${OS_list[$i]}
     mkdir -p ${OS_list[$i]}
     cd ${OS_list[$i]}
@@ -50,5 +52,7 @@ for (( i=0; i<$N; i++));  do
     cat ./data/template.txt >> $TOPDIR/OpenBLAS-${BRANCH}-${OS_list[$i]}/readme.txt
 #package
     zip -r OpenBLAS-${BRANCH}-${OS_list[$i]}.zip OpenBLAS-${BRANCH}-${OS_list[$i]}/
+
+    echo ${BRANCH}-${OS_list[$i]} End  at `date`
 
 done
