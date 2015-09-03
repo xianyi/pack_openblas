@@ -13,10 +13,12 @@ MD5SUM=md5sum
 
 GIT_LINK="github.com:xianyi/OpenBLAS.git"
 
-OS_list=(Win32 Win64-int32 Win64-int64)
+OS_list=(Win32 Win64-int32 Win64-int64 Linux32 Linux64)
 COMMAND_list[0]="BINARY=32 CC=i686-w64-mingw32-gcc FC=i686-w64-mingw32-gfortran"
 COMMAND_list[1]="BINARY=64 CC=x86_64-w64-mingw32-gcc FC=x86_64-w64-mingw32-gfortran"
 COMMAND_list[2]="BINARY=64 CC=x86_64-w64-mingw32-gcc FC=x86_64-w64-mingw32-gfortran INTERFACE64=1"
+COMMAND_list[3]="BINARY=32 CC=gcc FC=gfortran"
+COMMAND_list[4]="BINARY=64 CC=gcc FC=gfortran"
 
 N=${#OS_list[@]}
 
